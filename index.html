@@ -32,6 +32,26 @@
       margin: 0.5rem 0;
     }
 
+    header p {
+      margin: 0.5rem 0 1rem;
+    }
+
+    .top-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.8rem 1.4rem;
+      background: #fff;
+      color: #1e4a7b;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .top-btn:hover {
+      background: #16365a;
+      color: #fff;
+    }
+
     main {
       max-width: 900px;
       margin: 2rem auto;
@@ -160,6 +180,7 @@
     <img src="logo.jpg" alt="TG Würzburg-Heidingsfeld Logo">
     <h1>Kindertanzen beim TG Würzburg-Heidingsfeld</h1>
     <p>Von 1861 e. V. – Bewegung mit Freude und Musik</p>
+    <a href="#kontakt" class="top-btn">Kontakt aufnehmen</a>
   </header>
 
   <main>
@@ -170,7 +191,7 @@
     <section>
       <div class="info-box">
         <strong>📍 Ort:</strong> Wiesenweg 2, 97084 Würzburg<br>
-        <strong>📅 Start:</strong> ab Donnerstag, 13.11.2025 – Schnupperstunde möglich<br>
+        <strong>📅 Start:</strong> Donnerstag, 13.11.2025 – Schnupperstunde möglich<br>
         <strong>⏰ Zeit:</strong> 16:15 – 17:15 Uhr<br>
         <strong>👧👦 Alter:</strong> 5 – 8 Jahre<br>
         <strong>👩 Trainerin:</strong> Nicole
@@ -207,11 +228,11 @@
       <p><strong>Teilnahme ohne Mitgliedschaft?</strong> ✅ Ja – Schnupperstunde möglich!</p>
     </section>
 
-    <section>
+    <section id="kontakt">
       <h2>Kontakt</h2>
       <p>📧 <a href="mailto:kindertanzen@proton.me">kindertanzen@proton.me</a></p>
 
-      <form action="https://formspree.io/f/mnngqyyp" method="POST">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <label for="name">Name des Kindes</label>
         <input type="text" name="name" id="name" placeholder="z. B. Lea Müller" required>
 
@@ -226,7 +247,6 @@
 
         <button type="submit">Absenden</button>
       </form>
-
     </section>
   </main>
 
