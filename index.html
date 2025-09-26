@@ -213,16 +213,20 @@
 
       <form action="https://formspree.io/f/mnngqyyp" method="POST">
         <label for="name">Name des Kindes</label>
-        <input type="text" name="name" id="name" required>
+  <      input type="text" name="name" id="name" placeholder="z. B. Lea Müller" required>
+
+        <label for="age">Alter des Kindes</label>
+        <input type="text" name="age" id="age" placeholder="z. B. 6 Jahre" required>
 
         <label for="email">E-Mail der Eltern</label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" placeholder="z. B. familie.mueller@mail.de" required>
 
         <label for="message">Nachricht</label>
-        <textarea name="message" id="message" rows="4"></textarea>
+        <textarea name="message" id="message" rows="4" placeholder="z. B. Wir möchten zur Schnupperstunde kommen."></textarea>
 
         <button type="submit">Absenden</button>
       </form>
+
     </section>
   </main>
 
