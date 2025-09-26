@@ -1,124 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kindertanzen | TG Würzburg-Heidingsfeld 1861 e. V.</title>
-  <meta name="description" content="Kindertanzen beim TG Würzburg-Heidingsfeld – Spielerische Tanzstunden für Kinder von 5–8 Jahren. Jetzt Schnupperstunde sichern!">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kindertanzen – TG Würzburg-Heidingsfeld</title>
   <style>
-    :root{
-      --accent:#ff7aa2;
-      --accent-2:#2ec4b6;
-      --bg:#fff;
-      --muted:#666;
-      --maxw:1000px;
-      --radius:12px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fbfd;
+      color: #333;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Arial;margin:0;background:linear-gradient(180deg,#fff,#f8fbfb);color:#111}
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-    header{display:flex;gap:16px;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:72px;height:72px;}
-    h1{font-size:28px;margin:0 0 6px}
-    .tag{font-weight:600;color:var(--accent);font-size:14px}
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-top:18px;padding:18px;border-radius:var(--radius);background:#fff;box-shadow:0 6px 20px rgba(20,30,40,0.06)}
-    .lead{font-size:18px;color:var(--muted);line-height:1.4}
-    .btn{display:inline-block;padding:12px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700;border:none;cursor:pointer}
-    .card{background:white;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(20,30,40,0.04)}
-    .info-row{display:flex;gap:12px;align-items:center;margin:8px 0}
-    .muted{color:var(--muted);font-size:14px}
-    label{display:block;font-weight:600;margin:8px 0 6px}
-    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef0}
-    .small{font-size:13px;color:var(--muted)}
-    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
-    @media(min-width:820px){
-      .hero{grid-template-columns:1fr 380px}
-      h1{font-size:34px}
+
+    header {
+      background-color: #1e4a7b; /* Vereinsblau */
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header img {
+      max-height: 80px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: #1e4a7b;
+      border-bottom: 2px solid #1e4a7b;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .info-box {
+      background: #e9f1fa;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #1e4a7b;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+    }
+
+    form {
+      background: #f4f8fc;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #1e4a7b;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: #1e4a7b;
+      color: white;
+      padding: 0.9rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: 100%;
+    }
+
+    form button:hover {
+      background: #16365a;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin: 2rem 0;
+      padding: 1rem;
+    }
+
+    /* 📱 Mobile Optimierung */
+    @media (max-width: 600px) {
+      header {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      body {
+        font-size: 1rem;
+      }
+
+      .info-box {
+        font-size: 0.95rem;
+        padding: 1rem;
+      }
+
+      form input, form textarea {
+        font-size: 1rem;
+        padding: 0.8rem;
+      }
+
+      form button {
+        font-size: 1rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <img src="TGWH original.jpg" alt="TG Würzburg-Heidingsfeld Logo" class="logo">
-        <div>
-          <div class="tag">TG Würzburg-Heidingsfeld • seit 1861</div>
-          <h1>Kindertanzen beim TG Würzburg-Heidingsfeld von 1861 e. V.</h1>
-          <div class="muted">Wiesenweg 2, 97084 Würzburg</div>
-        </div>
-      </div>
-      <div class="muted small">Kontakt: <a href="mailto:kindertanzen@proton.me">kindertanzen@proton.me</a></div>
-    </header>
 
-    <section class="hero card">
-      <div>
-        <p class="lead">Unsere Stunden sind kindgerecht aufgebaut: kurze Aufwärmspiele, kleine Choreografien, Instrumente und Rhythmusspiele. Wir legen Wert auf Förderung der Koordination, Sozialkompetenz und auf ganz viel Spaß.</p>
-        <ul>
-          <li><strong>Start:</strong> Donnerstag, 13.11.2025 (Schnupperstunde)</li>
-          <li><strong>Uhrzeit:</strong> 16:15 – 17:15</li>
-          <li><strong>Alter:</strong> 5–8 Jahre</li>
-          <li><strong>Trainerin:</strong> Nicole</li>
-          <li><strong>Mitgliedschaft:</strong> Teilnahme auch ohne Mitgliedschaft möglich (Schnupperstunde)</li>
-        </ul>
-        <a class="btn" href="#anmeldung">Kostenlose Schnupperstunde sichern</a>
-      </div>
-      <div>
-        <img src="5377768817096260266.jpg" alt="Kinder tanzen" style="width:100%;border-radius:8px">
+  <header>
+    <img src="logo.jpg" alt="TG Würzburg-Heidingsfeld Logo">
+    <h1>Kindertanzen beim TG Würzburg-Heidingsfeld</h1>
+    <p>Von 1861 e. V. – Bewegung mit Freude und Musik</p>
+  </header>
+
+  <main>
+    <div class="hero">
+      <img src="tanz.jpg" alt="Kinder beim Tanzen">
+    </div>
+
+    <section>
+      <div class="info-box">
+        <strong>📍 Ort:</strong> Wiesenweg 2, 97084 Würzburg<br>
+        <strong>📅 Start:</strong> Donnerstag, 13.11.2025 – Schnupperstunde möglich<br>
+        <strong>⏰ Zeit:</strong> 16:15 – 17:15 Uhr<br>
+        <strong>👧👦 Alter:</strong> 5 – 8 Jahre<br>
+        <strong>👩 Trainerin:</strong> Nicole
       </div>
     </section>
 
-    <main>
-      <section class="card">
-        <h2>Warum Kindertanzen?</h2>
-        <ul>
-          <li>Fördert Motorik & Körperbewusstsein</li>
-          <li>Stärkt Selbstvertrauen und Ausdruck</li>
-          <li>Soziale Spiele und Teamgeist</li>
-        </ul>
-      </section>
+    <section>
+      <h2>Unsere Stunden</h2>
+      <p>Kinder erleben Tanz auf spielerische Weise – abwechslungsreich und altersgerecht:</p>
+      <ul>
+        <li>Kurz & lustig: Aufwärmspiele</li>
+        <li>Kreativ: Kleine Choreografien</li>
+        <li>Musikalisch: Instrumente & Rhythmusspiele</li>
+        <li>Förderung von Koordination, Sozialkompetenz & natürlich: ganz viel Spaß!</li>
+      </ul>
+    </section>
 
-      <section class="card" style="margin-top:14px">
-        <h2>Mitbringen</h2>
-        <p>Bequeme Kleidung, rutschfeste Socken oder Turnschläppchen, Wasserflasche.</p>
-      </section>
+    <section>
+      <h2>Warum Kindertanzen?</h2>
+      <ul>
+        <li>Fördert Motorik & Körperbewusstsein</li>
+        <li>Stärkt Selbstvertrauen & Ausdruck</li>
+        <li>Spielerisches Lernen von Teamgeist</li>
+      </ul>
+    </section>
 
-      <section class="card" style="margin-top:14px" id="anmeldung">
-        <h2>Anmeldung & Kontakt</h2>
-        <p class="muted small">Fülle das Formular aus — wir melden uns innerhalb von 48 Stunden.</p>
+    <section>
+      <h2>Zur Stunde mitbringen</h2>
+      <ul>
+        <li>Bequeme Kleidung</li>
+        <li>Rutschfeste Socken oder Turnschläppchen</li>
+        <li>Wasserflasche</li>
+      </ul>
+      <p><strong>Teilnahme ohne Mitgliedschaft?</strong> ✅ Ja – Schnupperstunde möglich!</p>
+    </section>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <label for="name">Name des Kindes</label>
-          <input id="name" name="Name des Kindes" required>
+    <section>
+      <h2>Kontakt</h2>
+      <p>📧 <a href="mailto:kindertanzen@proton.me">kindertanzen@proton.me</a></p>
 
-          <label for="age">Alter</label>
-          <input id="age" name="Alter" required>
+      <form action="https://formspree.io/f/mnngqyyp" method="POST">
+        <label for="name">Name des Kindes</label>
+        <input type="text" name="name" id="name" required>
 
-          <label for="guardian">Name Erziehungsberechtigte/r</label>
-          <input id="guardian" name="Erziehungsberechtigte/r" required>
+        <label for="email">E-Mail der Eltern</label>
+        <input type="email" name="email" id="email" required>
 
-          <label for="phone">Telefon</label>
-          <input id="phone" name="Telefon">
+        <label for="message">Nachricht</label>
+        <textarea name="message" id="message" rows="4"></textarea>
 
-          <label for="email">E‑Mail</label>
-          <input id="email" name="Email" type="email" required>
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+  </main>
 
-          <label for="message">Nachricht</label>
-          <textarea id="message" name="Nachricht" rows="3"></textarea>
+  <footer>
+    © 2025 TG Würzburg-Heidingsfeld von 1861 e. V.
+  </footer>
 
-          <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
-            <button class="btn" type="submit">Anmelden</button>
-            <div class="small muted">Alternativ: <a href="mailto:kindertanzen@proton.me">kindertanzen@proton.me</a></div>
-          </div>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <div>© TG Würzburg-Heidingsfeld von 1861 e. V. — Kindertanzen</div>
-    </footer>
-  </div>
 </body>
 </html>
